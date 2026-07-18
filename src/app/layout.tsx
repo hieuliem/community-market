@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
-const nunito = Nunito({
-  variable: "--font-nunito",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin", "vietnamese"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin", "vietnamese"],
 });
 
@@ -21,9 +26,9 @@ export default function RootLayout({
   return (
     <html
       lang="vi"
-      className={`${nunito.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
         {children}
         <Toaster />
       </body>
