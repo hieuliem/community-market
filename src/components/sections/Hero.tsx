@@ -17,16 +17,6 @@ const SLIDES = [
     },
   },
   {
-    image: "/images/slide2.jpg",
-    title: "🌿 Thưởng Thức Hương Vị Quê Nhà",
-    subtitle: "Bánh ướt dẻo thơm, Ya ua mát lạnh cùng các gian hàng đặc sản làm ấm lòng người xa xứ.",
-    badge: "Ẩm Thực Cuối Tuần",
-    primaryAction: {
-      text: "👉 ĐẶT NGAY HÔM NAY",
-      href: "#order-form",
-    },
-  },
-  {
     image: "/images/slide3.jpg",
     title: "Chung Tay Xây Dựng Tương Lai",
     subtitle: "Dịch vụ Rửa xe gây quỹ phục vụ cuối tuần này.",
