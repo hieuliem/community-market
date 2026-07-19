@@ -108,7 +108,7 @@ export function OrderForm() {
 
               {/* Radio group below Số lượng */}
               <div className="space-y-3">
-                <Label className="text-base">Giờ Nhận Hàng</Label>
+                <Label className="text-base">Giờ Nhận Hàng Cuối Tuần</Label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {[
                     { value: "9 PM (after 8 PM Mass)", label: "9 PM", desc: "Sau Thánh Lễ 8 PM" },
