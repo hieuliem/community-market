@@ -85,7 +85,7 @@ export function OrderForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="item" className="text-base">Chọn món / Dịch vụ</Label>
+                <Label htmlFor="item" className="text-base">Chọn món / Dịch vụ <span className="text-red-500">*</span></Label>
                 <Select name="item" defaultValue="yaua">
                   <SelectTrigger className="rounded-xl h-12" disabled={isLoading}>
                     <SelectValue placeholder="-- Vui lòng chọn --" />
@@ -100,15 +100,15 @@ export function OrderForm() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                 <div className="space-y-2 col-span-2 sm:col-span-1">
-                    <Label htmlFor="quantity" className="text-base">Số lượng</Label>
-                    <Input id="quantity" name="quantity" type="number" min="1" defaultValue="1" className="rounded-xl h-12" disabled={isLoading} />
-                 </div>
+                  <div className="space-y-2 col-span-2 sm:col-span-1">
+                     <Label htmlFor="quantity" className="text-base">Số lượng <span className="text-red-500">*</span></Label>
+                     <Input id="quantity" name="quantity" type="number" min="1" defaultValue="1" required className="rounded-xl h-12" disabled={isLoading} />
+                  </div>
               </div>
 
               {/* Radio group below Số lượng */}
               <div className="space-y-3">
-                <Label className="text-base">Giờ Nhận Hàng (Không bắt buộc)</Label>
+                <Label className="text-base">Giờ Nhận Hàng</Label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {[
                     { value: "9 PM (after 8 PM Mass)", label: "9 PM", desc: "Sau lễ 8 PM" },
@@ -141,7 +141,7 @@ export function OrderForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="notes" className="text-base">Ghi chú thêm (Không bắt buộc)</Label>
+                <Label htmlFor="notes" className="text-base">Ghi chú thêm</Label>
                 <Textarea id="notes" name="notes" placeholder="VD: Lấy lúc 10h sáng, ăn cay nhiều..." className="rounded-xl min-h-[100px]" disabled={isLoading} />
               </div>
 
