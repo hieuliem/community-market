@@ -14,41 +14,59 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Column 2: Contact Info */}
+        {/* Column 2: Google Maps */}
         <div className="space-y-3">
           <h4 className="text-sm font-bold tracking-wider border-b border-primary-foreground/20 pb-1.5 text-secondary">
-            LIÊN HỆ ĐẶT HÀNG (TEXT/CALL)
+            BẢN ĐỒ ĐƯỜNG ĐI
           </h4>
-          <ul className="space-y-2 text-sm">
-            <li className="flex justify-between items-center">
-              <span>Chị Tú Linh:</span>
-              <a href="tel:8043176485" className="font-bold hover:underline">(804) 317-6485</a>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>Chị Thùy Dương:</span>
-              <a href="tel:8043160552" className="font-bold hover:underline">(804) 316-0552</a>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>Anh Quốc:</span>
-              <a href="tel:8046886668" className="font-bold hover:underline">(804) 688-6668</a>
-            </li>
-          </ul>
+          <div className="w-full aspect-[16/9] rounded-xl overflow-hidden border border-primary-foreground/15 shadow-inner relative">
+            <iframe
+              title="Google Map Parish Address"
+              src="https://maps.google.com/maps?q=12500%20Patterson%20Avenue,%20Goochland,%20VA%2023238&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="absolute inset-0 w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
 
-        {/* Column 3: Weekly Pickup Times */}
-        <div className="space-y-3">
-          <h4 className="text-sm font-bold tracking-wider border-b border-primary-foreground/20 pb-1.5 text-secondary">
-            THỜI GIAN NHẬN HÀNG MỖI TUẦN
-          </h4>
-          <div className="space-y-3 text-sm">
-            <div>
-              <p className="font-bold text-secondary">Thứ Bảy:</p>
-              <p className="opacity-90">Sau Thánh Lễ (9:00 PM)</p>
+        {/* Column 3: Weekly Pickup Times & Contact Info */}
+        <div className="space-y-6">
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold tracking-wider border-b border-primary-foreground/20 pb-1.5 text-secondary">
+              THỜI GIAN NHẬN HÀNG MỖI TUẦN
+            </h4>
+            <div className="space-y-2 text-sm">
+              <div>
+                <p className="font-bold text-secondary">Thứ Bảy:</p>
+                <p className="opacity-90">Sau Thánh Lễ (9:00 PM)</p>
+              </div>
+              <div>
+                <p className="font-bold text-secondary">Chúa Nhật:</p>
+                <p className="opacity-90">Sau các Thánh Lễ (9:00 AM & 11:30 AM)</p>
+              </div>
             </div>
-            <div>
-              <p className="font-bold text-secondary">Chúa Nhật:</p>
-              <p className="opacity-90">Sau các Thánh Lễ (9:00 AM & 11:30 AM)</p>
-            </div>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold tracking-wider border-b border-primary-foreground/20 pb-1.5 text-secondary">
+              LIÊN HỆ ĐẶT HÀNG (TEXT/CALL)
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li className="flex justify-between items-center">
+                <span>Chị Tú Linh:</span>
+                <a href="tel:8043176485" className="font-bold hover:underline">(804) 317-6485</a>
+              </li>
+              <li className="flex justify-between items-center">
+                <span>Chị Thùy Dương:</span>
+                <a href="tel:8043160552" className="font-bold hover:underline">(804) 316-0552</a>
+              </li>
+              <li className="flex justify-between items-center">
+                <span>Anh Quốc:</span>
+                <a href="tel:8046886668" className="font-bold hover:underline">(804) 688-6668</a>
+              </li>
+            </ul>
           </div>
         </div>
 
