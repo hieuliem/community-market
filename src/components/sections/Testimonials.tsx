@@ -10,7 +10,7 @@ export function Testimonials() {
           <Card className="rounded-2xl border-none shadow-sm bg-white">
             <CardContent className="pt-6">
               <div className="flex text-yellow-400 mb-3">
-                {[...Array(5)].map((_,i) => <CheckCircle2 key={i} size={20} className="fill-current text-secondary mr-1"/>)}
+                {[...Array(5)].map((_, i) => <CheckCircle2 key={i} size={20} className="fill-current text-secondary mr-1" />)}
               </div>
               <p className="italic text-muted-foreground mb-4">
                 "Ya Ua ở đây đúng chuẩn vị ngày xưa mình hay ăn ở Việt Nam, tụi nhỏ nhà mình mê tít, lần nào cũng phải mua chục bịch!"
@@ -21,7 +21,7 @@ export function Testimonials() {
           <Card className="rounded-2xl border-none shadow-sm bg-white">
             <CardContent className="pt-6">
               <div className="flex text-yellow-400 mb-3">
-                 {[...Array(5)].map((_,i) => <CheckCircle2 key={i} size={20} className="fill-current text-secondary mr-1"/>)}
+                {[...Array(5)].map((_, i) => <CheckCircle2 key={i} size={20} className="fill-current text-secondary mr-1" />)}
               </div>
               <p className="italic text-muted-foreground mb-4">
                 "Cuối tuần mang xe ra rửa, tiện thể làm dĩa bánh ướt. Đồ ăn ngon, các bạn phục vụ rất nhiệt tình. Rất đáng ủng hộ!"

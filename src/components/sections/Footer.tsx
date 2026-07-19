@@ -18,12 +18,12 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-12 px-4 mt-auto">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        
+
         {/* Column 1: Info & Contact Email */}
         <div className="space-y-3">
           <h3 className="text-2xl font-bold font-heading">Community Market</h3>
-          <p className="text-sm">📧 <strong>Email liên hệ:</strong><br /><a href="mailto:bangayqua@gmail.com" className="hover:underline">bangayqua@gmail.com</a></p>
-          <p className="text-sm">📍 <strong>Địa điểm nhận hàng:</strong><br />Hội Trường Giáo Xứ Các Thánh Tử Đạo Việt Nam<br />12500 Patterson Avenue, Goochland, VA 23238</p>
+          <p className="text-sm">📧 <strong>Email liên hệ:</strong><br /><a href="mailto:bangayquy@gmail.com" className="hover:underline">bangayquy@gmail.com</a></p>
+          <p className="text-sm">📍 <strong>Địa điểm nhận hàng:</strong><br />Hội Trường Giáo Xứ Các Thánh Tử Đạo Việt Nam<br />12500 Patterson Avenue, Richmond, VA 23238</p>
           <div className="pt-2">
             <h4 className="font-bold text-secondary text-sm">Lưu ý quan trọng:</h4>
             <p className="text-xs opacity-90 leading-relaxed">Ưu tiên khách hàng đặt trước. Số lượng món ăn thường bán hết rất sớm. Vui lòng đến đúng giờ để nhận hàng.</p>

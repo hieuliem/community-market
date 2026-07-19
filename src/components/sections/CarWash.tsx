@@ -15,15 +15,15 @@ export function CarWash() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary font-heading">
           ✨ Dịch Vụ Rửa Xe Gây Quỹ ✨
         </h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-card border border-border/50 shadow-xl rounded-3xl overflow-hidden p-6 md:p-10">
           {/* Left: Flyer Image (Interactive Click to Zoom) */}
           <div className="lg:col-span-5 relative group cursor-pointer" onClick={() => setIsModalOpen(true)}>
             <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg border border-border">
-              <Image 
-                src="/images/car-wash-flyer.png" 
-                alt="Car Wash Flyer" 
-                fill 
+              <Image
+                src="/images/car-wash-flyer.png"
+                alt="Car Wash Flyer"
+                fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -42,13 +42,13 @@ export function CarWash() {
                 <Heart className="w-3.5 h-3.5 fill-primary" />
                 Your Donation Makes A Difference
               </span>
-              
+
               <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-secondary">
                 Car Wash Fundraiser
               </h3>
-              
+
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                Tất cả số tiền quyên góp từ dịch vụ rửa xe sẽ được chuyển trực tiếp vào quỹ xây dựng nhà thờ của **Giáo Xứ Các Thánh Tử Đạo Việt Nam tại Richmond, Virginia**. Hãy mang xế yêu của bạn đến để được chăm sóc chu đáo bởi đội ngũ tình nguyện viên nhiệt huyết!
+                Tất cả số tiền quyên góp từ dịch vụ rửa xe sẽ được chuyển trực tiếp vào quỹ xây dựng nhà thờ <span className="font-semibold">Các Thánh Tử Đạo Việt Nam tại Richmond, Virginia</span>. Hãy mang những chiếc xe yêu quý của bạn đến để được chăm sóc chu đáo bởi đội ngũ tình nguyện viên nhiệt huyết!
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export function CarWash() {
                   <p className="text-xs text-muted-foreground">10:00 AM - 5:00 PM</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
@@ -107,7 +107,7 @@ export function CarWash() {
             {/* Modal Header */}
             <div className="flex justify-between items-center px-5 py-3 border-b border-border/80">
               <h4 className="font-bold text-sm text-secondary">Car Wash Fundraiser Flyer</h4>
-              <button 
+              <button
                 onClick={() => setIsModalOpen(false)}
                 className="p-1.5 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
               >
@@ -116,17 +116,17 @@ export function CarWash() {
             </div>
             {/* Modal Body / Image */}
             <div className="relative flex-1 min-h-[50vh] bg-zinc-900">
-              <Image 
-                src="/images/car-wash-flyer.png" 
-                alt="Car Wash Flyer Large" 
-                fill 
+              <Image
+                src="/images/car-wash-flyer.png"
+                alt="Car Wash Flyer Large"
+                fill
                 className="object-contain"
                 sizes="(max-w-768px) 100vw, 500px"
               />
             </div>
             {/* Modal Footer */}
             <div className="px-5 py-3 border-t border-border/80 flex justify-end">
-              <button 
+              <button
                 onClick={() => setIsModalOpen(false)}
                 className={cn(buttonVariants({ variant: "outline" }), "rounded-xl")}
               >

@@ -15,7 +15,6 @@ export default function Home() {
       <AoDai />
       <WhyChooseUs />
       <OrderForm />
-      <Testimonials />
       <Footer />
     </main>
   );
