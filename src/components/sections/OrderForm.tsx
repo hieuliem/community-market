@@ -111,9 +111,9 @@ export function OrderForm() {
                 <Label className="text-base">Giờ Nhận Hàng</Label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {[
-                    { value: "9 PM (after 8 PM Mass)", label: "9 PM", desc: "Sau lễ 8 PM" },
-                    { value: "9 AM (after 8 AM Mass)", label: "9 AM", desc: "Sau lễ 8 AM" },
-                    { value: "11:30 AM (after 10:30 AM Mass)", label: "11:30 AM", desc: "Sau lễ 10:30 AM" }
+                    { value: "9 PM (after 8 PM Mass)", label: "9 PM", desc: "Sau Thánh Lễ 8 PM" },
+                    { value: "9 AM (after 8 AM Mass)", label: "9 AM", desc: "Sau Thánh Lễ 8 AM" },
+                    { value: "11:30 AM (after 10:30 AM Mass)", label: "11:30 AM", desc: "Sau Thánh Lễ 10:30 AM" }
                   ].map((option) => {
                     const isSelected = pickupTime === option.value;
                     return (
