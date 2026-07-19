@@ -173,7 +173,6 @@ export function OrderForm() {
               </span>
             </div>
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-3 italic">Click để xem chi tiết tờ rơi Ya Ua</p>
         </div>
 
       </div>
