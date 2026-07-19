@@ -25,6 +25,7 @@ export function CarWash() {
                 alt="Car Wash Flyer"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-w-768px) 100vw, 500px"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span className="bg-white/90 text-zinc-900 px-4 py-2 rounded-xl text-sm font-semibold shadow-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
