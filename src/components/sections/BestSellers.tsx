@@ -35,7 +35,7 @@ export function BestSellers() {
           </CardContent>
           <CardFooter>
             <a href="#order-form" className={buttonVariants({ className: "w-full rounded-xl bg-primary hover:bg-primary/90" })}>
-                + Thêm vào giỏ
+              + Thêm vào giỏ
             </a>
           </CardFooter>
         </Card>
@@ -52,7 +52,7 @@ export function BestSellers() {
           </CardContent>
           <CardFooter>
             <a href="#order-form" className={buttonVariants({ variant: "outline", className: "w-full rounded-xl bg-primary text-primary-foreground hover:bg-primary/90" })}>
-                Xem Mẫu Nhận Tư Vấn
+              Xem Mẫu Nhận Tư Vấn
             </a>
           </CardFooter>
         </Card>
@@ -69,7 +69,7 @@ export function BestSellers() {
           </CardContent>
           <CardFooter>
             <a href="#order-form" className={buttonVariants({ className: "w-full rounded-xl bg-primary hover:bg-primary/90" })}>
-                + Đặt Lịch
+              + Đặt Lịch
             </a>
           </CardFooter>
         </Card>
