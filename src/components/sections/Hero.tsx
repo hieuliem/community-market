@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const SLIDES = [
   {
     image: "/images/slide1.jpg",
-    title: "Cộng Đoàn Giáo Xứ Các Thánh Tử Đạo Việt Nam",
+    title: "Cộng Đoàn Giáo Xứ Các Thánh Tử Đạo Việt Nam Richmond, Virginia",
     subtitle: "Nơi nuôi dưỡng đức tin, lan tỏa tình yêu thương và kết nối cộng đồng tại Richmond, Virginia.",
     badge: "Chào Mừng Đến Với Giáo Xứ",
     primaryAction: {
@@ -28,8 +28,8 @@ const SLIDES = [
   },
   {
     image: "/images/slide3.jpg",
-    title: "Chung Tay Xây Dựng Cộng Đồng",
-    subtitle: "Gian hàng Áo Dài truyền thống và Dịch vụ Rửa xe gây quỹ phục vụ cuối tuần này.",
+    title: "Chung Tay Xây Dựng Tương Lai",
+    subtitle: "Dịch vụ Rửa xe gây quỹ phục vụ cuối tuần này.",
     badge: "Sự Kiện & Gây Quỹ",
     primaryAction: {
       text: "👉 ĐẶT NGAY HÔM NAY",
