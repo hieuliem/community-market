@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Visitor Counter</title>
+  <!-- Google Fonts: Outfit for modern numbers and typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      --card-bg: rgba(30, 41, 59, 0.4);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #c5a059; /* Gold accent */
+      --primary-glow: rgba(197, 160, 89, 0.4);
+      --success: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    /* Decorative background blobs */
+    .blob {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: var(--primary);
+      filter: blur(150px);
+      opacity: 0.15;
+      border-radius: 50%;
+      z-index: -1;
+      animation: float 10s infinite alternate;
+    }
+
+    .blob-1 {
+      top: 10%;
+      left: 15%;
+    }
+
+    .blob-2 {
+      bottom: 10%;
+      right: 15%;
+      animation-delay: -5s;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, 30px) scale(1.1); }
+    }
+
+    /* Main Container */
+    .counter-container {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      position: relative;
+      animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Badge status indicator */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      color: var(--success);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--success);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    /* The glowing number ticker display */
+    .number-display {
+      position: relative;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px 20px;
+      margin-bottom: 32px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .ticker-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .digit-box {
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 48px;
+      height: 64px;
+      border-radius: 12px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 0 10px var(--primary-glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Secondary Stats Row */
+    .stats-grid {
+      display: grid;
+      grid-cols: 2;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 24px;
+    }
+
+    .stat-card {
+      background: rgba(30, 41, 59, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      padding: 16px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Actions and Footer */
+    .action-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .action-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(197, 160, 89, 0.05);
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 20px;
+      opacity: 0.7;
+    }
+
+    .footer-note a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="counter-container">
+    <div class="status-badge">
+      <div class="status-dot"></div>
+      <span id="engine-label">Local Engine Active</span>
+    </div>
+
+    <h1 class="title">Website Visitors</h1>
+    <p class="subtitle">Real-time statistics monitor</p>
+
+    <div class="number-display">
+      <div class="ticker-row" id="ticker">
+        <!-- Digits will be rendered dynamically by JavaScript -->
+        <div class="digit-box">0</div>
+        <div class="digit-box">0</div>
+        <div class="digit-box">0</div>
+        <div class="digit-box">0</div>
+        <div class="digit-box">0</div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <p class="stat-label">Your Visits</p>
+        <p class="stat-value" id="user-visits">1</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Session Duration</p>
+        <p class="stat-value" id="session-time">0m 0s</p>
+      </div>
+    </div>
+
+    <button class="action-btn" onclick="resetCounter()">Reset Local Counter</button>
+
+    <p class="footer-note">
+      To make it global, integrate with <a href="https://firebase.google.com/" target="_blank">Firebase</a>.
+    </p>
+  </div>
+
+  <!-- Firebase Script Integration (Optional helper) -->
+  <!--
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  -->
+
+  <script>
+    // =========================================================================
+    // CONFIGURATION
+    // To switch to a database-backed Global Counter:
+    // 1. Un-comment the Firebase CDN script tags above.
+    // 2. Set 'useFirebase' to true and fill in your Firebase configuration keys.
+    // =========================================================================
+    const config = {
+      useFirebase: false, // Set to true to link global DB
+      firebaseConfig: {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.appspot.com",
+        messagingSenderId: "YOUR_SENDER_ID",
+        appId: "YOUR_APP_ID"
+      }
+    };
+
+    // State Variables
+    let globalVisits = 0;
+    let localVisits = 0;
+    let sessionStart = Date.now();
+
+    // Initialize visitor tracker logic
+    function initTracker() {
+      // 1. Update personal visit count
+      localVisits = parseInt(localStorage.getItem('my_visit_count') || '0') + 1;
+      localStorage.setItem('my_visit_count', localVisits);
+      document.getElementById('user-visits').textContent = localVisits;
+
+      // 2. Start session duration ticking
+      setInterval(updateSessionTime, 1000);
+
+      // 3. Connect to data source
+      if (config.useFirebase && typeof firebase !== 'undefined') {
+        initFirebaseEngine();
+      } else {
+        initLocalstorageEngine();
+      }
+    }
+
+    // --- LOCAL STORAGE ENGINE ---
+    // Increments a local storage total count (mocking serverless updates for a single browser context)
+    function initLocalstorageEngine() {
+      document.getElementById('engine-label').textContent = "Local Storage Active";
+      
+      // Get previous global mock count or default to a baseline
+      let mockTotal = parseInt(localStorage.getItem('mock_global_visits') || '2548');
+      
+      // If it is a new visit, increment
+      if (sessionStorage.getItem('session_counted') !== 'true') {
+        mockTotal += 1;
+        localStorage.setItem('mock_global_visits', mockTotal);
+        sessionStorage.setItem('session_counted', 'true');
+      }
+
+      globalVisits = mockTotal;
+      renderTicker(globalVisits);
+
+      // Simulate live random visitors ticking online (every 4-10 seconds) for real-time effects
+      setInterval(() => {
+        if (Math.random() > 0.4) {
+          globalVisits += Math.floor(Math.random() * 2) + 1;
+          localStorage.setItem('mock_global_visits', globalVisits);
+          renderTicker(globalVisits);
+        }
+      }, 7000);
+    }
+
+    // --- FIREBASE ENGINE (Optional Global Database) ---
+    function initFirebaseEngine() {
+      try {
+        firebase.initializeApp(config.firebaseConfig);
+        const db = firebase.database();
+        const visitsRef = db.ref('visits/total');
+        
+        document.getElementById('engine-label').textContent = "Firebase Global Active";
+        document.getElementById('engine-label').parentElement.style.borderColor = "rgba(16, 185, 129, 0.4)";
+
+        // Read and increment count on database
+        if (sessionStorage.getItem('session_counted') !== 'true') {
+          visitsRef.transaction((currentValue) => {
+            return (currentValue || 0) + 1;
+          }, () => {
+            sessionStorage.setItem('session_counted', 'true');
+          });
+        }
+
+        // Live subscribe to updates
+        visitsRef.on('value', (snapshot) => {
+          globalVisits = snapshot.val() || 0;
+          renderTicker(globalVisits);
+        });
+
+      } catch (err) {
+        console.error("Firebase init failed, falling back to LocalStorage:", err);
+        initLocalstorageEngine();
+      }
+    }
+
+    // Draw the digit box ticker beautifully
+    function renderTicker(count) {
+      const ticker = document.getElementById('ticker');
+      const digitsStr = String(count).padStart(5, '0');
+      
+      ticker.innerHTML = '';
+      for (let char of digitsStr) {
+        const box = document.createElement('div');
+        box.className = 'digit-box';
+        box.textContent = char;
+        ticker.appendChild(box);
+      }
+    }
+
+    // Update Session duration
+    function updateSessionTime() {
+      const diffSecs = Math.floor((Date.now() - sessionStart) / 1000);
+      const minutes = Math.floor(diffSecs / 60);
+      const seconds = diffSecs % 60;
+      document.getElementById('session-time').textContent = `${minutes}m ${seconds}s`;
+    }
+
+    // Reset local metrics
+    window.resetCounter = function() {
+      localStorage.setItem('my_visit_count', '0');
+      localStorage.setItem('mock_global_visits', '2548');
+      sessionStorage.removeItem('session_counted');
+      location.reload();
+    }
+
+    // Fire up tracker on load
+    window.addEventListener('DOMContentLoaded', initTracker);
+  </script>
+</body>
+</html>
