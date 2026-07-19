@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     if (process.env.RESEND_API_KEY) {
       await resend.emails.send({
         from: "Community Market <onboarding@resend.dev>",
-        to: "hieuliem2005@gmail.com",
+        to: ["hieuliem2005@gmail.com", "bangayquy@gmail.com"],
         subject: `🛒 Đơn hàng mới từ ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e4e4e7; rounded-corners: 8px;">
