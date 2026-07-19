@@ -1,4 +1,20 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export function Footer() {
+  const [visitorNumber, setVisitorNumber] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Read and synchronize with same counter storage key
+    let count = parseInt(localStorage.getItem("mock_global_visits") || "2548");
+    if (sessionStorage.getItem("session_counted") !== "true") {
+      count += 1;
+      localStorage.setItem("mock_global_visits", count.toString());
+      sessionStorage.setItem("session_counted", "true");
+    }
+    setVisitorNumber(count);
+  }, []);
   return (
     <footer className="bg-primary text-primary-foreground py-12 px-4 mt-auto">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -71,8 +87,14 @@ export function Footer() {
         </div>
 
       </div>
-      <div className="text-center mt-10 pt-4 border-t border-primary-foreground/20 text-sm opacity-80">
-        © 2026 Community Market. All rights reserved.
+      <div className="text-center mt-10 pt-4 border-t border-primary-foreground/20 text-sm opacity-80 flex flex-col items-center justify-center gap-3">
+        {visitorNumber !== null && (
+          <div className="inline-flex items-center gap-1.5 bg-black/20 border border-primary-foreground/10 text-primary px-3.5 py-1 rounded-full text-xs font-semibold shadow-sm backdrop-blur-sm select-none">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]" />
+            Lượt truy cập: #{visitorNumber.toLocaleString()}
+          </div>
+        )}
+        <div>© 2026 Community Market. All rights reserved.</div>
       </div>
     </footer>
   );
