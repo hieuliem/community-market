@@ -1,20 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 export function Footer() {
-  const [visitorNumber, setVisitorNumber] = useState<number | null>(null);
-
-  useEffect(() => {
-    // Read and synchronize with same counter storage key
-    let count = parseInt(localStorage.getItem("mock_global_visits") || "1");
-    if (sessionStorage.getItem("session_counted") !== "true") {
-      count += 1;
-      localStorage.setItem("mock_global_visits", count.toString());
-      sessionStorage.setItem("session_counted", "true");
-    }
-    setVisitorNumber(count);
-  }, []);
   return (
     <footer className="bg-primary text-primary-foreground py-12 px-4 mt-auto">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -92,14 +76,16 @@ export function Footer() {
         © 2026 Community Market. All rights reserved.
       </div>
 
-      {visitorNumber !== null && (
-        <div className="flex justify-center mt-4 select-none">
-          <div className="inline-flex items-center gap-1.5 bg-black/20 border border-primary-foreground/10 text-primary px-3.5 py-1 rounded-full text-xs font-semibold shadow-sm backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]" />
-            Lượt truy cập: #{visitorNumber.toLocaleString()}
-          </div>
-        </div>
-      )}
+      <div align="center" className="mt-4">
+        <a href="https://www.counter12.com">
+          <img src="https://www.counter12.com/img-4wy91w9B3dAW870W-57.gif" style={{ border: 0 }} alt="contador de visitas gratis" />
+        </a>
+        <script type="text/javascript" src="https://www.counter12.com/ad.js?id=4wy91w9B3dAW870W"></script>
+        <br />
+        <a href="https://meuip.page/qual-e-o-meu-ip/" target="_blank" rel="noreferrer">
+          <img src="https://img.meuip.page/selo-651Y6yzd7b7ZC3ca.gif" alt="meu ip" style={{ border: 0 }} />
+        </a>
+      </div>
     </footer>
   );
 }
