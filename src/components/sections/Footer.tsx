@@ -7,7 +7,7 @@ export function Footer() {
 
   useEffect(() => {
     // Read and synchronize with same counter storage key
-    let count = parseInt(localStorage.getItem("mock_global_visits") || "2548");
+    let count = parseInt(localStorage.getItem("mock_global_visits") || "1");
     if (sessionStorage.getItem("session_counted") !== "true") {
       count += 1;
       localStorage.setItem("mock_global_visits", count.toString());
@@ -87,18 +87,19 @@ export function Footer() {
         </div>
 
       </div>
+
+      <div className="text-center mt-6 pt-4 border-t border-primary-foreground/20 text-sm opacity-80">
+        © 2026 Community Market. All rights reserved.
+      </div>
+
       {visitorNumber !== null && (
-        <div className="flex justify-center mt-10 select-none">
+        <div className="flex justify-center mt-4 select-none">
           <div className="inline-flex items-center gap-1.5 bg-black/20 border border-primary-foreground/10 text-primary px-3.5 py-1 rounded-full text-xs font-semibold shadow-sm backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]" />
             Lượt truy cập: #{visitorNumber.toLocaleString()}
           </div>
         </div>
       )}
-
-      <div className="text-center mt-6 pt-4 border-t border-primary-foreground/20 text-sm opacity-80">
-        © 2026 Community Market. All rights reserved.
-      </div>
     </footer>
   );
 }
