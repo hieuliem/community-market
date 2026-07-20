@@ -61,8 +61,12 @@ export function Hero() {
   return (
     <section
       className="relative w-full aspect-[16/10] sm:aspect-[2/1] md:aspect-auto md:h-[75vh] min-h-[320px] sm:min-h-[400px] md:min-h-[550px] max-h-[750px] overflow-hidden bg-zinc-950 text-white"
-      onMouseEnter={() => setIsPlaying(false)}
-      onMouseLeave={() => setIsPlaying(true)}
+      onPointerEnter={(e) => {
+        if (e.pointerType === "mouse") setIsPlaying(false);
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === "mouse") setIsPlaying(true);
+      }}
     >
       {/* Slides images */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
