@@ -76,14 +76,14 @@ export function Footer() {
         © 2026 Community Market. All rights reserved.
       </div>
 
-      <div align="center" className="mt-4">
+      <div className="flex flex-col items-center gap-2 mt-4">
         <a href="https://www.counter12.com">
-          <img src="https://www.counter12.com/img-4wy91w9B3dAW870W-57.gif" style={{ border: 0 }} alt="contador de visitas gratis" />
+          <img src="https://www.counter12.com/img-4wy91w9B3dAW870W-57.gif" style={{ border: 0 }} alt="bộ đếm lượt truy cập" />
         </a>
         <script type="text/javascript" src="https://www.counter12.com/ad.js?id=4wy91w9B3dAW870W"></script>
         <br />
         <a href="https://meuip.page/qual-e-o-meu-ip/" target="_blank" rel="noreferrer">
-          <img src="https://img.meuip.page/selo-651Y6yzd7b7ZC3ca.gif" alt="meu ip" style={{ border: 0 }} />
+          <img src="https://img.meuip.page/selo-651Y6yzd7b7ZC3ca.gif" alt="Kiểm tra IP" style={{ border: 0 }} />
         </a>
       </div>
     </footer>
