@@ -27,7 +27,7 @@ export function AoDai() {
               </span>
               
               <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-secondary">
-                Mỗi Tà Áo Dài - Một Ngôi Trường Mới
+                Mỗi Tà Áo - Một Bước Dài
               </h3>
               
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
