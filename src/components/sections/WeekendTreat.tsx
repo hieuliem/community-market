@@ -100,7 +100,7 @@ export function WeekendTreat() {
 
         <div className="mt-12 bg-amber-500/10 border-2 border-amber-500/20 rounded-3xl p-6 text-center space-y-4">
           <p className="text-sm md:text-base font-semibold text-amber-800 dark:text-amber-300 leading-relaxed max-w-xl mx-auto flex items-center justify-center gap-1.5">
-            ✨ Số lượng có hạn, xin vui lòng đến sớm!
+            ✨ Số lượng có hạn, xin mời ghé qua!
           </p>
         </div>
       </div>
