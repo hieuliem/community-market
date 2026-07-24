@@ -21,10 +21,10 @@ export function WeekendTreat() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 space-y-4">
           <span className="bg-amber-500 hover:bg-amber-600 text-white font-bold px-4 py-1.5 rounded-full text-sm animate-pulse inline-flex items-center gap-1.5 shadow-md">
-            <Sparkles className="w-4 h-4" /> CHỈ CUỐI TUẦN NÀY!
+            <Sparkles className="w-4 h-4" /> CHỈ ĐẦU TUẦN NÀY!
           </span>
           <h2 className="text-4xl font-extrabold tracking-tight text-primary font-heading">
-            Hương vị Ngọt Ngào Sau Thánh Lễ
+            Hương vị Ngọt Ngào Đầu Tuần
           </h2>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-medium text-lg">
             <Calendar className="w-5 h-5 text-amber-500" />

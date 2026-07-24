@@ -42,11 +42,11 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div>
                 <p className="font-bold text-secondary">Thứ Bảy:</p>
-                <p className="opacity-90">Sau Thánh Lễ (9:00 PM)</p>
+                <p className="opacity-90">Cuối Tuần (9:00 PM)</p>
               </div>
               <div>
                 <p className="font-bold text-secondary">Chúa Nhật:</p>
-                <p className="opacity-90">Sau các Thánh Lễ (9:00 AM & 11:30 AM)</p>
+                <p className="opacity-90">Cuối Tuần (9:00 AM & 11:30 AM)</p>
               </div>
             </div>
           </div>
