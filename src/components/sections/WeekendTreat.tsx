@@ -24,7 +24,7 @@ export function WeekendTreat() {
             <Sparkles className="w-4 h-4" /> CHỈ CUỐI TUẦN NÀY!
           </span>
           <h2 className="text-4xl font-extrabold tracking-tight text-primary font-heading">
-            Quà Bánh Ngọt Ngào Sau Thánh Lễ
+            Hương vị Ngọt Ngào Sau Thánh Lễ
           </h2>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-medium text-lg">
             <Calendar className="w-5 h-5 text-amber-500" />
@@ -78,7 +78,7 @@ export function WeekendTreat() {
                 <Coffee className="w-6 h-6" />
               </div>
               <div>
-                <CardTitle className="text-xl font-bold font-heading text-primary">Chè Ngọt & Món Tráng Miệng</CardTitle>
+                <CardTitle className="text-xl font-bold font-heading text-primary">Món Tráng Miệng</CardTitle>
                 <CardDescription className="text-xs">Chè truyền thống & thạch thanh mát</CardDescription>
               </div>
             </CardHeader>
