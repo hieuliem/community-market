@@ -12,6 +12,12 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
+const itemLabels: Record<string, string> = {
+  yaua: "Ya Ua Việt Nam ($1/bịch)",
+  aodai: "Tư vấn Áo Dài",
+  ruaxe: "Đặt lịch Rửa Xe",
+};
+
 export function OrderForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [pickupTime, setPickupTime] = useState("");
@@ -66,10 +72,10 @@ export function OrderForm() {
         <Card className="lg:col-span-7 rounded-2xl border-primary/20 shadow-lg flex flex-col justify-between">
           <CardHeader className="text-center pb-6">
             <CardTitle className="text-3xl text-primary flex items-center justify-center gap-2">
-              🛒 Giữ Chỗ Đơn Hàng Của Bạn
+              🛒 Liên Lạc Với Chúng Tôi
             </CardTitle>
             <CardDescription className="text-base text-red-500 font-medium mt-2">
-              (Số lượng có hạn, thường hết sớm!)
+              (Số lượng có hạn bạn nhé!)
             </CardDescription>
           </CardHeader>
           <CardContent className="flex-1">
@@ -88,13 +94,14 @@ export function OrderForm() {
                 <Label htmlFor="item" className="text-base">Chọn món / Dịch vụ <span className="text-red-500">*</span></Label>
                 <Select name="item" defaultValue="yaua">
                   <SelectTrigger className="rounded-xl h-12" disabled={isLoading}>
-                    <SelectValue placeholder="-- Vui lòng chọn --" />
+                    <SelectValue placeholder="-- Vui lòng chọn --">
+                      {(value: string | null) => value ? (itemLabels[value] ?? value) : "-- Vui lòng chọn --"}
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="yaua">Ya Ua Việt Nam ($1/bịch)</SelectItem>
-                    <SelectItem value="banhuot">Bánh Ướt Chả Lụa ($8/phần)</SelectItem>
-                    <SelectItem value="aodai">Tư vấn Áo Dài</SelectItem>
-                    <SelectItem value="ruaxe">Đặt lịch Rửa Xe</SelectItem>
+                    {Object.entries(itemLabels).map(([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
