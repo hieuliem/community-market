@@ -28,7 +28,7 @@ export function WeekendTreat() {
           </h2>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-medium text-lg">
             <Calendar className="w-5 h-5 text-amber-500" />
-            <span>Thứ Bảy & Chúa Nhật, ngày 25 & 26 tháng 7</span>
+            <span style={{ fontFamily: "var(--font-quicksand)", fontWeight: 600 }}>Thứ Bảy & Chúa Nhật, ngày 25 & 26 tháng 7</span>
           </div>
           <p className="max-w-2xl mx-auto text-muted-foreground leading-relaxed text-base pt-2">
             Ghé qua Hội Trường Giáo Xứ sau giờ lễ để thưởng thức các món tráng miệng và ăn vặt truyền thống thơm ngon, tự tay gia đình trong cộng đoàn chuẩn bị! Rất thích hợp để chia sẻ cùng gia đình hoặc thưởng thức trên đường về nhà.
