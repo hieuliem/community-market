@@ -15,7 +15,6 @@ import { cn } from "@/lib/utils";
 const itemLabels: Record<string, string> = {
   yaua: "Ya Ua Việt Nam ($1/bịch)",
   aodai: "Tư vấn Áo Dài",
-  ruaxe: "Đặt lịch Rửa Xe",
 };
 
 export function OrderForm() {
