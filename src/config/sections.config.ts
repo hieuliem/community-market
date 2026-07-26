@@ -4,6 +4,7 @@ import { AoDai } from "@/components/sections/AoDai";
 import { WeekendTreat } from "@/components/sections/WeekendTreat";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { OrderForm } from "@/components/sections/OrderForm";
+import { TetTrungThu } from "@/components/sections/TetTrungThu";
 import { Footer } from "@/components/sections/Footer";
 
 export interface SectionConfig {
@@ -57,6 +58,13 @@ export const SECTIONS: SectionConfig[] = [
     component: WeekendTreat,
     // Visible until 12:00 PM EST tomorrow (2026-07-26 12:00 EST = 17:00 UTC)
     unpublishedAt: new Date("2026-07-26T17:00:00.000Z"),
+  },
+  {
+    id: "TetTrungThu",
+    component: TetTrungThu,
+    // Published now; expires at midnight ET on 9/20/2026 (04:00 UTC 9/21)
+    publishedAt: new Date("2026-07-26T00:00:00.000Z"),
+    unpublishedAt: new Date("2026-09-21T04:00:00.000Z"),
   },
   {
     id: "CarWash",
