@@ -29,11 +29,11 @@ const SLIDES = [
   {
     image: "/images/slide3.jpg",
     title: "Chung Tay Xây Dựng Tương Lai",
-    subtitle: "Dịch vụ Rửa xe gây quỹ phục vụ cuối tuần này.",
+    subtitle: "Hãy đưa các em đến đón mừng Trung Thu trong khuôn viên Giáo Xứ.",
     badge: "Sự Kiện & Gây Quỹ",
     primaryAction: {
-      text: "👉 ĐẶT NGAY HÔM NAY",
-      href: "#order-form",
+      text: "scroll-down",
+      href: "#TetTrungThu",
     },
   },
 ];
@@ -138,15 +138,27 @@ export function Hero() {
 
                 {/* CTA Button */}
                 <div className="pt-2 sm:pt-4 flex flex-wrap gap-4 items-center">
-                  <a
-                    href={slide.primaryAction.href}
-                    className={cn(
-                      buttonVariants({ size: "lg" }),
-                      "bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-lg rounded-xl px-5 py-4 sm:px-8 sm:py-6 font-bold shadow-lg transition-all hover:scale-[1.03] hover:shadow-primary/20"
-                    )}
-                  >
-                    {slide.primaryAction.text}
-                  </a>
+                  {slide.primaryAction.text === "scroll-down" ? (
+                    <a
+                      href={slide.primaryAction.href}
+                      aria-label="Xem thông tin Tết Trung Thu"
+                      className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 transition-all animate-bounce"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </a>
+                  ) : (
+                    <a
+                      href={slide.primaryAction.href}
+                      className={cn(
+                        buttonVariants({ size: "lg" }),
+                        "bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-lg rounded-xl px-5 py-4 sm:px-8 sm:py-6 font-bold shadow-lg transition-all hover:scale-[1.03] hover:shadow-primary/20"
+                      )}
+                    >
+                      {slide.primaryAction.text}
+                    </a>
+                  )}
                 </div>
               </div>
             );
