@@ -88,6 +88,8 @@ export function Hero() {
                 src={slide.image}
                 alt=""
                 fill
+                priority={idx === 0}
+                loading={idx === 0 ? "eager" : undefined}
                 className="object-cover filter blur-2xl opacity-35 scale-110"
                 sizes="100vw"
               />
@@ -98,6 +100,7 @@ export function Hero() {
                 alt={slide.title}
                 fill
                 priority={idx === 0}
+                loading={idx === 0 ? "eager" : undefined}
                 className="object-contain object-top z-10"
                 sizes="100vw"
               />
