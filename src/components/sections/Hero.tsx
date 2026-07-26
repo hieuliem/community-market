@@ -183,8 +183,10 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Bottom fade line */}
-      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent z-25" />
+      {/* Bottom fade — blends images into black */}
+      <div className="absolute bottom-0 left-0 right-0 h-56 z-25 pointer-events-none"
+        style={{ background: "linear-gradient(to top, black 0%, black 20%, rgba(0,0,0,0.7) 50%, transparent 100%)" }}
+      />
     </section>
   );
 }

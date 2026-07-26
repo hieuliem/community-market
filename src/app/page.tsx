@@ -7,7 +7,7 @@ export default function Home() {
   const activeSections = SECTIONS.filter(isPublished);
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col bg-black">
       {activeSections.map(({ id, component: Section }) => (
         <Section key={id} />
       ))}
