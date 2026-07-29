@@ -60,17 +60,18 @@ export const SECTIONS: SectionConfig[] = [
     unpublishedAt: new Date("2026-07-26T17:00:00.000Z"),
   },
   {
+    id: "CarWash",
+    component: CarWash,
+    // TODO: change publishedAt back to 2026-07-30T02:00:00.000Z (10 PM EDT) before deploying
+    publishedAt: new Date("2026-07-29T23:19:00.000Z"),
+    unpublishedAt: new Date("2026-08-16T19:00:00.000Z"),
+  },
+  {
     id: "TetTrungThu",
     component: TetTrungThu,
     // Published now; expires at midnight ET on 9/20/2026 (04:00 UTC 9/21)
     publishedAt: new Date("2026-07-26T00:00:00.000Z"),
     unpublishedAt: new Date("2026-09-21T04:00:00.000Z"),
-  },
-  {
-    id: "CarWash",
-    component: CarWash,
-    // Visible until midnight tonight (2026-07-26 00:00 EST = 05:00 UTC)
-    unpublishedAt: new Date("2026-07-26T05:00:00.000Z"),
   },
   {
     id: "AoDai",

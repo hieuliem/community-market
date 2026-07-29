@@ -21,8 +21,8 @@ export function CarWash() {
           <div className="lg:col-span-5 relative group cursor-pointer" onClick={() => setIsModalOpen(true)}>
             <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg border border-border">
               <Image
-                src="/images/car-wash-flyer.png"
-                alt="Car Wash Flyer"
+                src="/images/car-wash-flyer-2.jpg"
+                alt="Car Wash Fundraiser Sunday - Ngày 16 Tháng 8 2026"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-w-768px) 100vw, 500px"
@@ -44,11 +44,11 @@ export function CarWash() {
               </span>
 
               <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-secondary">
-                Car Wash Fundraiser
+                Car Wash Fundraiser Sunday
               </h3>
 
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                Tất cả số tiền quyên góp từ dịch vụ rửa xe sẽ được chuyển trực tiếp vào quỹ xây dựng nhà thờ <span className="font-semibold">Các Thánh Tử Đạo Việt Nam tại Richmond, Virginia</span>. Hãy mang những chiếc xe yêu quý của bạn đến để được chăm sóc chu đáo bởi đội ngũ tình nguyện viên nhiệt huyết!
+                <span className="font-semibold italic">&ldquo;Hand Washed with Care, Built with Prayer&rdquo;</span> — Tất cả số tiền quyên góp sẽ được chuyển trực tiếp vào quỹ xây dựng nhà thờ <span className="font-semibold">Các Thánh Tử Đạo Việt Nam tại Richmond, Virginia</span>. Hãy mang xe đến ủng hộ và để đội tình nguyện viên chăm sóc chu đáo cho bạn!
               </p>
             </div>
 
@@ -58,8 +58,8 @@ export function CarWash() {
                 <Calendar className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-sm">Thời gian</h4>
-                  <p className="text-xs text-muted-foreground">Thứ Bảy, ngày 25 tháng 7</p>
-                  <p className="text-xs text-muted-foreground">10:00 AM - 5:00 PM</p>
+                  <p className="text-xs text-muted-foreground">Chủ Nhật, ngày 16 tháng 8, 2026</p>
+                  <p className="text-xs text-muted-foreground">Sau hai Thánh lễ</p>
                 </div>
               </div>
 
@@ -67,8 +67,8 @@ export function CarWash() {
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-sm">Địa điểm</h4>
-                  <p className="text-xs text-muted-foreground">Pho 79</p>
-                  <p className="text-xs text-muted-foreground">6909 Staples Mill Rd, Richmond, VA 23228</p>
+                  <p className="text-xs text-muted-foreground">Church of the Vietnamese Martyrs</p>
+                  <p className="text-xs text-muted-foreground">12500 Patterson Ave, Richmond, VA 23238</p>
                 </div>
               </div>
             </div>
@@ -77,12 +77,12 @@ export function CarWash() {
             <div className="space-y-2">
               <h4 className="font-semibold text-sm flex items-center gap-1.5 text-secondary">
                 <MapPin className="w-4 h-4 text-primary" />
-                Bản đồ đường đi (Pho 79)
+                Bản đồ đường đi (Church of the Vietnamese Martyrs)
               </h4>
               <div className="w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden border border-border/80 shadow-inner relative">
                 <iframe
-                  title="Google Map Pho 79 Car Wash"
-                  src="https://maps.google.com/maps?q=Pho%2079%206909%20Staples%20Mill%20Rd,%20Richmond,%20VA%2023228&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  title="Google Map Church of the Vietnamese Martyrs"
+                  src="https://maps.google.com/maps?q=12500%20Patterson%20Ave,%20Richmond,%20VA%2023238&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   className="absolute inset-0 w-full h-full border-0"
                   allowFullScreen
                   loading="lazy"
@@ -117,8 +117,8 @@ export function CarWash() {
             {/* Modal Body / Image */}
             <div className="relative flex-1 min-h-[50vh] bg-zinc-900">
               <Image
-                src="/images/car-wash-flyer.png"
-                alt="Car Wash Flyer Large"
+                src="/images/car-wash-flyer-2.jpg"
+                alt="Car Wash Fundraiser Sunday - Ngày 16 Tháng 8 2026"
                 fill
                 className="object-contain"
                 sizes="(max-w-768px) 100vw, 500px"
