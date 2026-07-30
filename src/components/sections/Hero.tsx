@@ -9,11 +9,11 @@ const SLIDES = [
   {
     image: "/images/slide1.jpg",
     title: "Các Thánh Tử Đạo Việt Nam Richmond, Virginia",
-    subtitle: "Nơi nuôi dưỡng đức tin, lan tỏa tình yêu thương và kết nối cộng đồng tại Richmond, Virginia.",
+    subtitle: "Nơi nuôi dưỡng đức tin, lan tỏa tình yêu thương và kết nối cộng đồng.",
     badge: "Chào Mừng Đến Với Giáo Xứ",
     primaryAction: {
-      text: "👉 ĐẶT NGAY HÔM NAY",
-      href: "#order-form",
+      text: "scroll-down",
+      href: "#car-wash",
     },
   },
   {
@@ -29,7 +29,7 @@ const SLIDES = [
   {
     image: "/images/slide3.jpg",
     title: "Chung Tay Xây Dựng Tương Lai",
-    subtitle: "Hãy đưa các em đến đón mừng Trung Thu trong khuôn viên Giáo Xứ.",
+    subtitle: "Rửa xe gây quỹ, vui đón Trăng Rằm — chung tay vì ngôi nhà chung.",
     badge: "Sự Kiện & Gây Quỹ",
     primaryAction: {
       text: "scroll-down",
