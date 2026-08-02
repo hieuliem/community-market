@@ -3,9 +3,9 @@ import { Calendar, Sparkles, Utensils, Coffee } from "lucide-react";
 
 export function WeekendTreat() {
   const savoryItems = [
+    { name: "Xôi Gấc", detail: "Red Sticky Rice", price: "$5", unit: "/ hộp" },
     { name: "Bánh Ướt", detail: "Fresh Rice Rolls", price: "$6", unit: "/ lb" },
     { name: "Chả Cá Nguyên Chất", detail: "Premium Fish Cake", price: "$20", unit: "/ lb" },
-    { name: "Xôi Gấc", detail: "Red Sticky Rice", price: "$5", unit: "/ hộp" },
   ];
 
   const sweetItems = [
