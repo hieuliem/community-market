@@ -10,7 +10,7 @@ export function WeekendTreat() {
 
   const sweetItems = [
     { name: "Chè Bột Bán", detail: "Sweet Tapioca Pudding", price: "$5", unit: "/ ly" },
-    { name: "Đậu Hũ Singapo", detail: "Singapore-Style Tofu Pudding", price: "$10", unit: "/ 5 ly" },
+    { name: "Đậu Hũ Singapore", detail: "Singapore-Style Tofu Pudding", price: "$10", unit: "/ 5 ly" },
     { name: "Bánh Cam", detail: "Sweet Sesame Balls", price: "$10", unit: "/ 6 cái" },
     { name: "Ya Ua", detail: "Vietnamese Yogurt", price: "$20", unit: "/ 20 bịch" },
   ];
