@@ -56,8 +56,8 @@ export const SECTIONS: SectionConfig[] = [
   {
     id: "WeekendTreat",
     component: WeekendTreat,
-    // Visible until 12:00 PM EST tomorrow (2026-07-26 12:00 EST = 17:00 UTC)
-    unpublishedAt: new Date("2026-07-26T17:00:00.000Z"),
+    // Expires Aug 16 at 3 PM EDT (2026-08-16 19:00 UTC)
+    unpublishedAt: new Date("2026-08-16T19:00:00.000Z"),
   },
   {
     id: "CarWash",
