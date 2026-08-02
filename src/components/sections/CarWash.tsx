@@ -13,7 +13,7 @@ export function CarWash() {
     <section className="py-16 px-4 bg-primary/5 w-full" id="car-wash">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary font-heading">
-          ✨ Dịch Vụ Rửa Xe Gây Quỹ ✨
+          ✨ Viết Tiếp <span className="font-heading italic font-light text-primary/60 tracking-widest text-2xl md:text-3xl translate-y-1 inline-block">những</span> Ước Mơ ✨
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-card border border-border/50 shadow-xl rounded-3xl overflow-hidden p-6 md:p-10">

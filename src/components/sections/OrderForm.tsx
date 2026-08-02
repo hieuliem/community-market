@@ -11,10 +11,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { isCarWashActive } from "@/config/sections.config";
 
 const itemLabels: Record<string, string> = {
   yaua: "Ya Ua Việt Nam ($1/bịch)",
   aodai: "Tư vấn Áo Dài",
+  ...(isCarWashActive() && { carwash: "Đặt Lịch Rửa Xe" }),
 };
 
 export function OrderForm() {

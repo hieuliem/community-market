@@ -44,6 +44,7 @@ export function isPublished(section: SectionConfig): boolean {
   return true;
 }
 
+
 /**
  * Ordered list of page sections.
  * Add, remove, or reorder entries here — page.tsx never needs to change.
@@ -90,3 +91,9 @@ export const SECTIONS: SectionConfig[] = [
     component: Footer,
   },
 ];
+
+/** Returns true when the CarWash section is currently published/active. */
+export function isCarWashActive(): boolean {
+  const carwash = SECTIONS.find((s) => s.id === "CarWash");
+  return carwash ? isPublished(carwash) : false;
+}
