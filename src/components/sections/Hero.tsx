@@ -29,7 +29,7 @@ const SLIDES = [
   {
     image: "/images/slide3.jpg",
     title: "Chung Tay Xây Dựng Tương Lai",
-    subtitle: "Rửa xe gây quỹ, vui đón Trăng Rằm — chung tay vì ngôi nhà chung.",
+    subtitle: "Rửa Xe Gây Quỹ – Trăng Rằm Toả Sáng – Áo Dài Thướt Tha",
     badge: "Sự Kiện & Gây Quỹ",
     primaryAction: {
       text: "scroll-down",
