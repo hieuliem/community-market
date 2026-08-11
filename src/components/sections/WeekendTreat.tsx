@@ -32,7 +32,7 @@ export function WeekendTreat() {
           <div className="flex items-center justify-center gap-2 font-semibold text-lg text-amber-300">
             <Calendar className="w-5 h-5" />
             <span style={{ fontFamily: "var(--font-quicksand)", fontWeight: 700 }}>
-              Thứ Bảy &amp; Chúa Nhật, ngày 15 &amp; 16 tháng 8
+              Thứ Bảy, ngày 15 tháng 8
             </span>
           </div>
 
