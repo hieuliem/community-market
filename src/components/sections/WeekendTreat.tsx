@@ -65,9 +65,8 @@ export function WeekendTreat() {
                     </div>
                     <div className="shrink-0 ml-4 text-right">
                       <span className="font-extrabold text-black bg-amber-400 px-3.5 py-1.5 rounded-2xl text-base shadow-md shadow-amber-500/20 whitespace-nowrap">
-                        {item.price}
+                        {item.price} {item.unit}
                       </span>
-                      <p className="text-[10px] text-zinc-500 mt-1 text-center">{item.unit}</p>
                     </div>
                   </div>
                 ))}
@@ -103,9 +102,8 @@ export function WeekendTreat() {
                     </div>
                     <div className="shrink-0 ml-4 text-right">
                       <span className="font-extrabold text-black bg-amber-400 px-3.5 py-1.5 rounded-2xl text-base shadow-md shadow-amber-500/20 whitespace-nowrap">
-                        {item.price}
+                        {item.price} {item.unit}
                       </span>
-                      <p className="text-[10px] text-zinc-500 mt-1 text-center">{item.unit}</p>
                     </div>
                   </div>
                 ))}
